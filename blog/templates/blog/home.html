@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>My Awesome Blog</h1>
+        <p>Sharing thoughts, ideas, and tutorials</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="blog-post">
+            <h2>Welcome to My Blog</h2>
+            <p>This is the first post of my blog. Here I will share tutorials, tips, and my personal thoughts on web development, programming, and more.</p>
+            <a href="#">Read More...</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>Getting Started with Django</h2>
+            <p>Django is a powerful web framework in Python. In this post, we’ll go through the basics of setting up a Django project and creating your first app.</p>
+            <a href="#">Read More...</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>HTML & CSS Tips</h2>
+            <p>Learn some essential HTML and CSS tips to create responsive and visually appealing websites. This is perfect for beginners and intermediate developers.</p>
+            <a href="#">Read More...</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 My Awesome Blog. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

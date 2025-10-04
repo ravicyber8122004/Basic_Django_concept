@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .post-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .post:last-child {
+            border-bottom: none;
+        }
+        .post h2 {
+            color: #007bff;
+            margin: 0;
+        }
+        .post p {
+            color: #555;
+        }
+        .no-posts {
+            text-align: center;
+            color: #999;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 All Blog Posts</h1>
+
+    <div class="post-container">
+        {% for post in posts %}
+            <div class="post">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content|truncatewords:30 }}</p>
+                <small>Published on {{ post.created_at|date:"M d, Y" }}</small>
+            </div>
+        {% empty %}
+            <p class="no-posts">No posts available yet.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
